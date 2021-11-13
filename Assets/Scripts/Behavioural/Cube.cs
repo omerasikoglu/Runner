@@ -20,11 +20,15 @@ public class Cube : MonoBehaviour
 
     private void Timers()
     {
-        //return to pool
-        lifeTime -= Time.deltaTime;
-        if (lifeTime <= 0 && !isCollected)
+        //geçtikten sonra arkadaki küpler full random'sa pool'a eklensin
+        if (GroundGenerator.Instance.GetIsFullRandomGenerating())
         {
-            gameObject.SetActive(false);
+            //return to pool
+            lifeTime -= Time.deltaTime;
+            if (lifeTime <= 0 && !isCollected)
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
 
@@ -32,7 +36,7 @@ public class Cube : MonoBehaviour
     {
         if (data.isRandom) data.isAlly = UnityEngine.Random.Range(0, 2) == 0 ? true : false;
         data.materialTintColor = data.isAlly ? Color.blue : Color.yellow;
-        lifeTime = 8f;
+        //lifeTime = 8f;
 
         data.material = GetComponent<MeshRenderer>().material;
         data.material.SetColor("_MainColor", data.materialTintColor);

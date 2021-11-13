@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class GroundGenerator : MonoBehaviour
 {
-    [SerializeField] GameObject finalGround;
     public static GroundGenerator Instance { get; private set; }
+   
+    [SerializeField] private bool isfullRandomGenerate = false;
+    [SerializeField] private GameObject finalGround;
+    [SerializeField] private List<GameObject> firstFiveLevel;
 
     private Vector3 groundPosition;
 
@@ -18,15 +21,21 @@ public class GroundGenerator : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+
         groundPosition = new Vector3(0, 0, 0); //platformun Instantiate edileceði yerin konumu
         currentLevel = PlayerPrefs.GetInt(LEVEL);
-        SpawnGround();
+        if (!isfullRandomGenerate) isfullRandomGenerate = currentLevel > 5;
+        if (isfullRandomGenerate) SpawnGround();
+        else
+        {
+            Instantiate(firstFiveLevel[currentLevel - 1]);
+        }
     }
 
     public void SpawnGround()
     {
         //seviyeye göre bölüm uzunluðunun artmasý
-        GameObject go = groundCount == currentLevel * 5 ? Instantiate(finalGround) : Pool.Instance.GetRandomPrefabFromGroundPool();
+        GameObject go = groundCount == currentLevel * 2 ? Instantiate(finalGround) : Pool.Instance.GetRandomPrefabFromGroundPool();
 
         go.SetActive(true);
         go.transform.position += new Vector3(0, 0, groundZ * groundCount);
@@ -36,5 +45,9 @@ public class GroundGenerator : MonoBehaviour
         groundPosition.z += groundZ;
         groundCount++;
 
+    }
+    public bool GetIsFullRandomGenerating()
+    {
+        return isfullRandomGenerate;
     }
 }

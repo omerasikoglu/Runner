@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     private void Awake()
     {
+        Application.targetFrameRate =60;
         Time.timeScale = 1;
         data.rigidbody = GetComponent<Rigidbody>();
     }

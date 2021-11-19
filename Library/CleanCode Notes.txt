@@ -1,0 +1,9 @@
+- 3 ve 3ten fazla parametreli metodun varsa birden fazla işlevi olması muhtemel
+- enum ve switchcase yerine polimorfizm kullan
+- class metod ismini düzgün koy "manager"lara karsı dikkatli ol
+- metod 3+ parametre alıyorsa tüm objeleri tek par olarak yollamayı düşün
+- metod uzantılkarını yakın yere koy
+- 3+ par.li metod
+
+UNITY EDITOR
+-Sprite renderer'ı root objeye koyma

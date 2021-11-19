@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8536bec6fca54547a478f1d69bf9aae, type: 3}
+  m_Name: PlatformData
+  m_EditorClassIdentifier: 
+  collectibleCube: {fileID: 3598865257210121820, guid: a0a5950392e8b824eb7e7ce02f0f808f, type: 3}
+  collectibleCoin: {fileID: 1538172797208423336, guid: e6acc356bdc4bb6488f7fa7adda47eae, type: 3}
+  obstacleList:
+  - {fileID: 2033328576781655182, guid: 6dcc7fe19df797447ad6ad5f3f2c7a0d, type: 3}
+  - {fileID: 5038617440792443650, guid: 241cadb172b212940a08301a30bd5255, type: 3}
+  - {fileID: 5038617440792443650, guid: c0558c0560d3f0642bad68daa666b0c8, type: 3}
+  collectibleCubeMaxX: 0.3
+  collectibleCubeMaxZ: 0.5
+  obstacleMaxX: 0.2
+  obstacleMaxZ: 0.5
+  coinMaxX: 0.4
+  coinMaxZ: 0.5
+  collectibleCubeCount: 2
+  coinCount: 1
+  obstacleCount: 1

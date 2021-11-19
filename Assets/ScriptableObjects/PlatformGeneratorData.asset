@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ca5267a834c3a4daa32e15d86f14de, type: 3}
+  m_Name: PlatformGeneratorData
+  m_EditorClassIdentifier: 
+  first: {fileID: 8503520970251721019, guid: fbf2b7738c43d114c976cd7b2498b8dc, type: 3}
+  final: {fileID: 585098617327597945, guid: 180d8f98d47811a40a071cd60bdf0b7f, type: 3}
+  platform: {fileID: 3014675467378083388, guid: 2b55148e51f81fd4084f466137bce89a, type: 3}
+  levelList:
+  - {fileID: 662879419235827572, guid: 9241e8ce420b93d45b4e5d299ebff2a8, type: 3}
+  - {fileID: 662879419235827572, guid: 18465d36a20ed6843ae4c25608e2887c, type: 3}
+  - {fileID: 662879419235827572, guid: 5513445cdb532754ea0b7434c4b5ae44, type: 3}
+  - {fileID: 662879419235827572, guid: a3717056d6aa1e545a18a0749e1f2ab3, type: 3}
+  - {fileID: 662879419235827572, guid: d69b74bde07a4b342b2d24986440bb42, type: 3}
+  platformPosition: {x: 0, y: 0, z: 0}
+  groundZ: 20
+  platformCount: 0
+  currentLevel: 1

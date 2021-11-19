@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   _jumpforce: 15
-  _movementSpeed: 0.1
+  _movementSpeed: 0.15
   groundLayer:
     serializedVersion: 2
     m_Bits: 64

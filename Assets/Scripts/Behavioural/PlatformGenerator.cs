@@ -11,7 +11,7 @@ public class PlatformGenerator : MonoBehaviour
 
     private void DataInit()
     {
-        if (!PlayerPrefs.HasKey(Strings.LEVEL) || PlayerPrefs.GetInt(Strings.LEVEL) == 0)
+        if (!PlayerPrefs.HasKey(Strings.LEVEL) || PlayerPrefs.GetInt(Strings.LEVEL) <= 0)
         {
             PlayerPrefs.SetInt(Strings.LEVEL, 1);
         }
@@ -32,7 +32,7 @@ public class PlatformGenerator : MonoBehaviour
 
     private void SpawnPlatforms()
     {
-        //seviyeye göre bölüm uzunluðunun artmasý
+        //seviyeye gÃ¶re bÃ¶lÃ¼m uzunluÃ°unun artmasÃ½
 
         Spawn(data.first);
 
